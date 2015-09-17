@@ -1,0 +1,45 @@
+@charset "utf-8";
+/*
+Peloton color scheme
+
+*/
+
+body { 
+	background-color: grey;
+}
+
+.jacbt_site_header {
+    background-color: rgba(0,0,0,0.5); 
+}
+
+#site-footer {
+    background-color: rgba(0,0,0,0.5);
+}
+
+#jacbt_sidebar { 
+	background-color: white;
+}
+
+#jacbt_content {
+	background-color: white;
+}
+
+#footer { 
+	background-color: white;
+}
+
+blockquote:before {
+    color: #ddd;
+}
+
+blockquote:after {
+    color: #ddd;
+}
+
+/* post metadata elements */	
+span.jacbt_post_meta {
+    color: #828282;
+}
+.jacbt_meta_wrapper a {
+	color: #727272;
+}

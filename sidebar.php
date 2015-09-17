@@ -1,4 +1,4 @@
-<div id="sidebar">
+<div id="jacbt_sidebar">
 <h2 ><?php _e('Categories'); ?></h2>
 <ul >
 <?php wp_list_cats('sort_column=name&optioncount=1&hierarchical=0'); ?>
