@@ -38,6 +38,7 @@ body {
     top: 0;
     -webkit-transition: all 0.4s ease-in-out;
   	-moz-transition: all 0.4s ease-in-out;
+  	transition: all 0.4s ease-in-out;
   	z-order: 9999;
 }
 .jacbt_site_header_full {
@@ -46,6 +47,20 @@ body {
 .jacbt_site_header_min {
 	   height: 70px;
 }
+.jacbt_title_block {
+	display:	inline-block;
+}
+.jacbt_header_title {
+	margin:		5px 0px 0px 0px;	
+}
+.jacbt_header_tagline {
+	margin:		0px;	
+    -webkit-transition: all 0.4s ease-in-out;
+  	-moz-transition: all 0.4s ease-in-out;
+  	transition: all 0.4s ease-in-out;
+	
+}
+
 
 #site-footer {
 	min-height: 30px;
@@ -80,7 +95,7 @@ div.breaker-breaker {
 	overflow: hidden; 
 }
 
-#footer { 
+#jacbt_footer { 
 	margin-top: 20px; 
 	border-radius: 20px;
 	padding: 10px;

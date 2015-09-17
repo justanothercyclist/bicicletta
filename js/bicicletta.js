@@ -9,6 +9,7 @@ function jacbt_dynamic_header() {
 			jQuery("#jacbt_site_header").removeClass("jacbt_site_header_full");
 			jQuery("#jacbt_site_header_logo").height(60);
 			jQuery("#jacbt_site_header_logo").width(60);
+			// jQuery(".jacbt_header_tagline").css('visibility', 'hidden');
 			
 		}
 		else { 
@@ -16,7 +17,7 @@ function jacbt_dynamic_header() {
 			jQuery("#jacbt_site_header").addClass("jacbt_site_header_full");
 			jQuery("#jacbt_site_header_logo").height(135);
 			jQuery("#jacbt_site_header_logo").width(135);
-
+			// jQuery(".jacbt_header_tagline").css('visibility', 'visible');
 		}
 	});
 }

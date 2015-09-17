@@ -1,0 +1,28 @@
+/*
+	--- Menus
+*/
+.jacbt_menu_header, .jacbt_menu_footer {
+	float:		right;
+	display:	inline-block;
+	margin-right: 10px	
+}
+
+.jacbt_menu_header li, .jacbt_menu_footer li {
+	display:	inline-block;
+		
+}
+
+.jacbt_menu_header a, .jacbt_menu_footer a {
+    padding-left: 5px;
+    padding-right: 5px;
+    bacgkground-color: transparent;
+    border-radius: 20px;
+}
+.jacbt_menu_header a:link, .jacbt_menu_footer a:link {
+    text-decoration: none;	
+}
+.jacbt_menu_header a:active, .jacbt_menu_footer a:active,
+.jacbt_menu_header a:hover, .jacbt_menu_footer a:hover {
+	// background-color set in color-scheme
+	background-color: white;
+}

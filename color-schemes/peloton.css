@@ -9,7 +9,10 @@ body {
 }
 
 .jacbt_site_header {
-    background-color: rgba(0,0,0,0.5); 
+    background-color: rgba(255,255,255,0.8); 
+}
+.jacbt_site_header, .jacbt_site_header a, .jacbt_site_header, .jacbt_site_header a {
+    color: black; 
 }
 
 #site-footer {
@@ -24,7 +27,7 @@ body {
 	background-color: white;
 }
 
-#footer { 
+#jacbt_footer { 
 	background-color: white;
 }
 
@@ -43,3 +46,11 @@ span.jacbt_post_meta {
 .jacbt_meta_wrapper a {
 	color: #727272;
 }
+
+.jacbt_menu_header a:active, .jacbt_menu_header a:hover {
+	background-color: white;
+}	
+.jacbt_menu_footer a:active, .jacbt_menu_footer a:hover {
+	// background-color: #828282;
+	background-color: red;
+}	
