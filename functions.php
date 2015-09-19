@@ -93,4 +93,20 @@ function jacbt_localization(){
 }
 
 
+
+
+/* Trim navigation title strings to avoid overruns */
+function jacbt_truncate_string( $text, $width, $elips = '...' ) {
+  $trun_width = $width - strlen( $elips );
+  // Force a minimum width here for sanity
+  if ( $trun_width < strlen( $elips) + 5 ) {
+    $trun_width = strlen( $elips) + 5;
+  }
+  $text_out = $text;
+  if ( strlen( $text ) > $width ) {
+    $text_out = substr( $text, 0, $trun_width ) . $elips;
+  } 
+  return $text_out;
+  
+}
 ?>

@@ -56,10 +56,12 @@ span.jacbt_post_meta_right {
     font-weight: bold;
 }
 
-.jacbt_meta_wrapper a:link, a.jacbt_post_title_link {
+.jacbt_meta_wrapper a:link, a.jacbt_post_title_link,
+.jacbt_post_nav_bottom a:link {
     text-decoration: none;	
 }
-.jacbt_meta_wrapper a:hover, .jacbt_meta_wrapper a:active {
+.jacbt_meta_wrapper a:hover, .jacbt_meta_wrapper a:active,
+.jacbt_post_nav_bottom a:hover .jacbt_post_nav_bottom a:active {
 	text-decoration: none;
 }
 
@@ -73,4 +75,17 @@ a:link.more-link {
 }
 a:hover.more-link {
 	text-decoration: none;
+}
+
+div.jacbt_post_nav_bottom {
+	clear: both;
+	padding: 20px;
+}
+div.jacbt_post_nav_bottom_prev {
+	display: inline-block;
+	float: left;
+}
+div.jacbt_post_nav_bottom_next {
+	display: inline-block;
+	float: right;
 }

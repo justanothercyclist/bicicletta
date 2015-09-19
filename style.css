@@ -31,6 +31,11 @@ ul li:before {
 	clear: both;
 }
 
+.screen-reader-text {
+     position: absolute;
+     left: -1000em;
+}
+
 #jacbt_wrapper { 
 	display: block;
 	padding-top: 145px;  
@@ -125,4 +130,26 @@ div.breaker-breaker {
 }
 .jacbt_footer_content {
 	display: block-inline;
+}
+
+.wp-caption {
+    padding: 7px 3px 3px 3px;
+    background-color: #eee;
+    margin: 3px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 80%;
+}
+.wp-caption-text {
+	margin: 0px 3px 0px 3px;
+}
+
+.alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
+}
+.aligncenter {
+	margin: 0 auto;
 }
