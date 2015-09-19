@@ -12,16 +12,16 @@
 
 <body>
 <div id="jacbt_site_header" class="jacbt_site_header jacbt_site_header_full">
-	<div id="jacbt_site_header_logo">
-	
-	</div>
+	<a href="<?php echo get_site_url(); ?>">
+		<div id="jacbt_site_header_logo"></div>
+	</a>
 	<div class="jacbt_title_block">
     	<h1 class="jacbt_header_title"><?php echo get_bloginfo( 'name' ); ?></h1>
     	<h3 class="jacbt_header_tagline"><?php echo get_bloginfo( 'description' ); ?></h3>
 	</div>
     <?php 
       get_header(); 
-      if ( has_nav_menu( 'jacbt_menu_footer' ) ) {
+      if ( has_nav_menu( 'jacbt_menu_header' ) ) {
         wp_nav_menu( array( 'theme_location' => 'jacbt_menu_header', 'container_class' => 'jacbt_menu_header' ) );
       }
     ?>

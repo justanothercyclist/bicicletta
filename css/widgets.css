@@ -1,0 +1,16 @@
+.jacbt_footer_widget_wrapper {
+	display: inline-block;
+	width: 33.33%;
+	height: 100%;
+	border: 1px;
+	float: left;
+}
+
+#jacbt_self_promo  {
+	text-align: center;
+	font-weight: bold;
+}
+
+#jacbt_self_promo a {
+	text-decoration: underline;
+}

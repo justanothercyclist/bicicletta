@@ -55,9 +55,22 @@ span.jacbt_post_meta_right {
     font-style: normal;
     font-weight: bold;
 }
-.jacbt_meta_wrapper a:link {
+
+.jacbt_meta_wrapper a:link, a.jacbt_post_title_link {
     text-decoration: none;	
 }
 .jacbt_meta_wrapper a:hover, .jacbt_meta_wrapper a:active {
-	text-decoration: underline;
+	text-decoration: none;
+}
+
+a.more-link {
+    font-style: normal;
+    font-weight: bold;
+}
+
+a:link.more-link {
+    text-decoration: none;	
+}
+a:hover.more-link {
+	text-decoration: none;
 }

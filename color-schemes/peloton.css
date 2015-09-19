@@ -46,11 +46,34 @@ span.jacbt_post_meta {
 .jacbt_meta_wrapper a {
 	color: #727272;
 }
+a.jacbt_post_title_link {
+	color: black;
+}
+.jacbt_menu_above_content {
+	background-color:	white;
+}
+
+a {
+	color: black;
+}
+a:hover {
+	background-color: #dddddd;
+}
+
+#jacbt_sidebar > *, #jacbt_sidebar > * a,
+#jacbt_footer > *, #jacbt_footer > * a{
+	color: #727272;
+}
+
+.jacbt_menu_header, .jacbt_menu_header a,
+.jacbt_menu_above_content, .jacbt_menu_above_content a {
+	color: black;
+	font-weight: bold;
+}
 
 .jacbt_menu_header a:active, .jacbt_menu_header a:hover {
 	background-color: white;
 }	
-.jacbt_menu_footer a:active, .jacbt_menu_footer a:hover {
-	// background-color: #828282;
-	background-color: red;
+\.jacbt_menu_above_content a:active, .jacbt_menu_above_content a:hover {
+	background-color: #d2d2d2;
 }	
