@@ -81,3 +81,7 @@ a:hover {
 \.jacbt_menu_above_content a:active, .jacbt_menu_above_content a:hover {
 	background-color: #d2d2d2;
 }	
+
+.comment-body {
+	border-color: black;
+}

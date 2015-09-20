@@ -23,7 +23,7 @@ body {
 ul li {
 	list-style: none;
 }
-ul li:before {
+li:before {
 	content:"\00BB\00a0";
 }
 

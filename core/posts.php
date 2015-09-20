@@ -57,11 +57,10 @@ function jacbt_render_posts() {
   		      $next_link='<a class="jacbt_nav_link jacbt_nav_link_next" href="' . $link_href . '">' . $link_title . '</a>';
   		    }
             wp_link_pages( $pag_post_settings );
-  		    
-  		    
-  		    
-  		    comments_template(); 
-  		    ?> 
+  		    ?>
+  		   	<div class="jacbt_comment_wrapper">
+  		    <?php comments_template(); ?>
+  		    </div> 
   		    <div class="jacbt_post_nav_bottom">
       		  	<div class="jacbt_post_nav_bottom_prev"><?php echo $previous_link; ?></div>
       		  	<div class="jacbt_post_nav_bottom_next"><?php echo $next_link ?></div>
