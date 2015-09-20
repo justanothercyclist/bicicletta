@@ -25,6 +25,12 @@ blockquote:after {
     font-size: 82px;
     line-height: 1;
 }
+
+.sticky {
+	border-radius: 20px;
+	padding: 20px;
+}
+
 .title { font-size: 11pt; font-family: verdana; font-weight: bold; }
 
 h1.jacbt_post_title {
@@ -57,11 +63,11 @@ span.jacbt_post_meta_right {
 }
 
 .jacbt_meta_wrapper a:link, a.jacbt_post_title_link,
-.jacbt_post_nav_bottom a:link {
+.jacbt_post_nav a:link {
     text-decoration: none;	
 }
 .jacbt_meta_wrapper a:hover, .jacbt_meta_wrapper a:active,
-.jacbt_post_nav_bottom a:hover .jacbt_post_nav_bottom a:active {
+.jacbt_post_nav a:hover .jacbt_post_nav a:active {
 	text-decoration: none;
 }
 
@@ -79,6 +85,9 @@ a:hover.more-link {
 
 div.jacbt_post_nav_bottom {
 	clear: both;
+	padding: 20px;
+}
+div.jacbt_post_nav_top {
 	padding: 20px;
 }
 div.jacbt_post_nav_bottom_prev {

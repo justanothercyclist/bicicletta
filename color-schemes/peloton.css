@@ -39,11 +39,15 @@ blockquote:after {
     color: #ddd;
 }
 
+.sticky {
+	background-color: #ffff99;
+}
+
 /* post metadata elements */	
 span.jacbt_post_meta {
     color: #828282;
 }
-.jacbt_meta_wrapper a, .jacbt_post_nav_bottom a, .jacbt_post_nav_bottom {
+.jacbt_meta_wrapper a, .jacbt_post_nav a, .jacbt_post_nav {
 	color: #727272;
 }
 a.jacbt_post_title_link {

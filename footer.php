@@ -25,5 +25,6 @@ if ( is_active_sidebar( 'jacbt_footer_right' ) ) { ?>
 <?php } ?>
 </div>
 </div>
+<?php wp_footer(); ?>
 </body>
 </html>

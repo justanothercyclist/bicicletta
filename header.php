@@ -10,7 +10,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class( 'jacbt_body' ); ?> >
 <div id="jacbt_site_header" class="jacbt_site_header jacbt_site_header_full">
 	<a href="<?php echo get_site_url(); ?>">
 		<div id="jacbt_site_header_logo"></div>
