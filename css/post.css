@@ -98,3 +98,9 @@ div.jacbt_post_nav_bottom_next {
 	display: inline-block;
 	float: right;
 }
+div.jacbt_post_pag_header {
+	margin-left: 25px;
+}
+div.jacbt_post_pag_header a {
+	font-weight: bold;
+}

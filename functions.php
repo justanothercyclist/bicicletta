@@ -1,4 +1,9 @@
 <?php
+/*
+ * Here you will find only the initalization and registration functions.
+ */
+
+
 
 /*
  --- Widget Areas
@@ -91,26 +96,9 @@ add_action( 'wp_enqueue_scripts', 'jacbt_load_depends' );
 /*
   --- Localiztion where possible
 */
-add_action('after_setup_theme', 'jacbt_localization');
 function jacbt_localization(){
     load_theme_textdomain('jacbt_theme', get_template_directory() . '/languages');
 }
+add_action('after_setup_theme', 'jacbt_localization');
 
-
-
-
-/* Trim navigation title strings to avoid overruns */
-function jacbt_truncate_string( $text, $width, $elips = '...' ) {
-  $trun_width = $width - strlen( $elips );
-  // Force a minimum width here for sanity
-  if ( $trun_width < strlen( $elips) + 5 ) {
-    $trun_width = strlen( $elips) + 5;
-  }
-  $text_out = $text;
-  if ( strlen( $text ) > $width ) {
-    $text_out = substr( $text, 0, $trun_width ) . $elips;
-  } 
-  return $text_out;
-  
-}
 ?>
