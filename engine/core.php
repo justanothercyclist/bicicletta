@@ -17,5 +17,15 @@ function jacbt_truncate_string( $text, $width, $elips = '...' ) {
   
 }
 
+/* Convert hex RGBA + alpha valie into rgba output */
+function jacbt_hex_to_rgba( $in_hex, $in_alpha, $return = False ) {
+  $a = $in_alpha / 100;
+  list($r, $g, $b) = sscanf( $in_hex, "#%2x%2x%2x" );
+  $color = "rgba( $r, $g, $b, $a )";
+  if ( $return ) {
+    return $color;
+  }
+  echo $color;
+}
 
 ?>

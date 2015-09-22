@@ -4,17 +4,6 @@ Peloton color scheme
 
 */
 
-body { 
-	background-color: grey;
-}
-
-.jacbt_site_header {
-    background-color: rgba(255,255,255,0.8); 
-}
-.jacbt_site_header, .jacbt_site_header a, .jacbt_site_header, .jacbt_site_header a {
-    color: black; 
-}
-
 #site-footer {
     background-color: rgba(0,0,0,0.5);
 }
