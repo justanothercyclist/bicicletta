@@ -4,6 +4,9 @@
  */
 
 
+foreach (glob(TEMPLATEPATH . '/engine/*.php') as $core_php) {
+    include $core_php;
+}
 
 /*
  --- Widget Areas
@@ -73,6 +76,7 @@ add_action( 'init', 'jacbt_reg_header_menu' );
  --- Dependancies...
  */
 function jacbt_load_depends() {
+  global $jacbt_theme_options;
   /* CSS */
   wp_enqueue_style( 'jacbt_posts', get_stylesheet_directory_uri() . '/css/post.css' );
   wp_enqueue_style( 'jacbt_menus', get_stylesheet_directory_uri() . '/css/menus.css' );
@@ -85,11 +89,13 @@ function jacbt_load_depends() {
   if ( is_singular() ) {
     wp_enqueue_script( "comment-reply" );
   }
-  wp_enqueue_script(
-		'jacbt_bicicletta_js',
-        get_stylesheet_directory_uri() . '/js/bicicletta.js',
-        array( 'jquery' )
-  );
+  if ( get_theme_mod( 'jacbt_dynamic_header', True ) ) {
+    wp_enqueue_script(
+  		'jacbt_bicicletta_js',
+          get_stylesheet_directory_uri() . '/js/dynheader.js',
+          array( 'jquery' )
+    );
+  }
 }
 add_action( 'wp_enqueue_scripts', 'jacbt_load_depends' );
 

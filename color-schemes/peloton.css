@@ -43,11 +43,11 @@ blockquote:after {
 	background-color: #ffff99;
 }
 
-/* post metadata elements */	
-span.jacbt_post_meta {
+/* post and comment metadata elements */	
+span.jacbt_post_meta div.comment-meta {
     color: #828282;
 }
-.jacbt_meta_wrapper a, .jacbt_post_nav a, .jacbt_post_nav {
+.jacbt_meta_wrapper a, .jacbt_post_nav a, .jacbt_post_nav, .comment-meta a {
 	color: #727272;
 }
 a.jacbt_post_title_link {
@@ -83,5 +83,10 @@ a:hover {
 }	
 
 .comment-body {
+    background-color: #EFEFEF;
+}
+
+a.comment-reply-link {
+	background-color: white;
 	border-color: black;
 }

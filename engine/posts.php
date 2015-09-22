@@ -29,7 +29,7 @@ function jacbt_render_posts() {
   			} ?>
   		</h1>
   		<div class="jacbt_meta_wrapper">
-    		<span class="jacbt_author_credit jacbt_post_meta jacbt_post_meta_left">Posted by <a class="jacbt_author_credit jacbt_post_meta" href="<?php get_author_posts_url( get_the_author_id() );?>"><?php echo get_the_author(); ?></a></span>
+    		<span class="jacbt_author_credit jacbt_post_meta jacbt_post_meta_left">Posted by <a class="jacbt_author_credit jacbt_post_meta" href="<?php get_author_posts_url( get_the_author_meta( 'display_name' ) );?>"><?php echo get_the_author(); ?></a></span>
     		<span class="jacbt_author_credit jacbt_post_meta jacbt_post_meta_right">Published <?php the_time('F jS, Y') ?></span>
     		<div class="breaker-breaker"></div>
     		<span class="jacbt_post_catlist jacbt_post_meta jacbt_post_meta_left"><?php if( has_category( ) ) : echo __('Posted in ') . get_the_category_list( ', ', '' ); endif; ?></span>

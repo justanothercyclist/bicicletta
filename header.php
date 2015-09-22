@@ -16,14 +16,18 @@
 		<div id="jacbt_site_header_logo"></div>
 	</a>
 	<div class="jacbt_title_block">
-    	<h1 class="jacbt_header_title"><?php echo get_bloginfo( 'name' ); ?></h1>
+    	<h1 class="jacbt_header_title"><?php 
+    	  if ( get_theme_mod( 'jacbt_display_blogname', True) ) {
+    	    echo get_bloginfo( 'name' ); 
+    	  }?></h1>
     	<h3 class="jacbt_header_tagline"><?php
-    	  // TODO: This should be toggalable. i.e. always show description, or replace with post title
-    	  if ( is_single() ) {
-    	    echo jacbt_truncate_string( single_post_title( '', FALSE ), 60 );
-    	  } else {
-    	    echo get_bloginfo( 'description' );
-    	  } 
+    	  if ( get_theme_mod( 'jacbt_display_tagline', True) ) {
+        	  if ( get_theme_mod( 'jacbt_dynamic_tagline', True) && is_single() ) {
+        	    echo jacbt_truncate_string( single_post_title( '', FALSE ), 60 );
+        	  } else {
+        	    echo get_bloginfo( 'description' );
+        	  } 
+    	  }
   	  ?></h3>
 	</div>
     <?php 

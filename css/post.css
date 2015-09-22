@@ -38,11 +38,11 @@ h1.jacbt_post_title {
 }
 
 /* post metadata elements */
-div.jacbt_meta_wrapper {
+div.jacbt_meta_wrapper, div.comment-meta {
 	overflow: hidden;
 }
 	
-span.jacbt_post_meta {
+span.jacbt_post_, div.comment-meta {
     padding: 0;
     color: #828282;
     font-style: italic;
@@ -57,17 +57,18 @@ span.jacbt_post_meta_right {
 	float: right;
 }
 
-.jacbt_meta_wrapper a {
+.jacbt_meta_wrapper a, .comment-meta a {
     font-style: normal;
     font-weight: bold;
 }
 
 .jacbt_meta_wrapper a:link, a.jacbt_post_title_link,
-.jacbt_post_nav a:link {
+.jacbt_post_nav a:link, .comment-meta a:link {
     text-decoration: none;	
 }
 .jacbt_meta_wrapper a:hover, .jacbt_meta_wrapper a:active,
-.jacbt_post_nav a:hover .jacbt_post_nav a:active {
+.jacbt_post_nav a:hover .jacbt_post_nav a:active,
+.comment-meta a:hover, .comment-mena a:active {
 	text-decoration: none;
 }
 
@@ -103,4 +104,9 @@ div.jacbt_post_pag_header {
 }
 div.jacbt_post_pag_header a {
 	font-weight: bold;
+}
+
+.reply {
+	border-radius: 5px;
+	padding: 5px;
 }

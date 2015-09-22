@@ -1,8 +1,4 @@
 <?php
-foreach (glob(TEMPLATEPATH . '/core/*.php') as $core_php) {
-    include $core_php;
-}
-
   get_header(); 
   if ( has_nav_menu( 'jacbt_menu_above_content' ) ) {
     wp_nav_menu( array( 'theme_location' => 'jacbt_menu_header', 'container_class' => 'jacbt_menu_above_content' ) );
