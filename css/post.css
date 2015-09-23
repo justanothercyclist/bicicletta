@@ -9,7 +9,6 @@ blockquote:before {
     top: -10px;
     left: -60px;
     content: "\201C";
-    color: #ddd;
     font-family: serif;
     font-size: 82px;
     line-height: 1;	
@@ -20,14 +19,12 @@ blockquote:after {
     bottom: -10px;
     right: -60px;
     content: "\201D";
-    color: #ddd;
     font-family: serif;
     font-size: 82px;
     line-height: 1;
 }
 
 .sticky {
-	border-radius: 20px;
 	padding: 20px;
 }
 
@@ -42,9 +39,8 @@ div.jacbt_meta_wrapper, div.comment-meta {
 	overflow: hidden;
 }
 	
-span.jacbt_post_, div.comment-meta {
+span.jacbt_post_meta, div.comment-meta {
     padding: 0;
-    color: #828282;
     font-style: italic;
     font-weight: normal;	
 }
@@ -55,6 +51,9 @@ span.jacbt_post_meta_left {
 span.jacbt_post_meta_right {
     margin: 0px 25px 0px 10px;
 	float: right;
+}
+.jacbt_post_tags {
+	padding-left: 10px;
 }
 
 .jacbt_meta_wrapper a, .comment-meta a {

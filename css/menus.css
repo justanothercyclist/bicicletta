@@ -7,9 +7,6 @@
 	margin-right: 10px	
 }
 
-.jacbt_menu_above_content {
-	border-radius: 5px;	
-}
 .jacbt_menu_header li, .jacbt_menu_above_content li {
 	display:	inline-block;
 }
@@ -31,8 +28,4 @@ ul.menu li:before {
 }
 .jacbt_menu_header a:link, .jacbt_menu_footer a:link, .jacbt_menu_above_content a:link {
     text-decoration: none;	
-}
-.jacbt_menu_header a:active, .jacbt_menu_footer a:active, .jacbt_menu_above_content a:active,
-.jacbt_menu_header a:hover, .jacbt_menu_footer a:hover, jacbt_menu_above_content a:hover {
-	// background-color set in color-scheme
 }

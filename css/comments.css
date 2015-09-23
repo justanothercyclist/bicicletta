@@ -1,0 +1,26 @@
+li.comment:before {
+	content:'';
+}
+
+.comment-body {
+    border-radius: 0px 15px 15px 15px;
+    padding: 15px;
+    margin-bottom: 10px;}
+
+p.comment-form-comment label {
+	display: block;
+}
+p.comment-form-comment textarea {
+    border-radius: 15px 15px 0px 15px;
+}
+div.vcard img.avatar {
+    float: left;
+    margin-right: 10px;
+}
+a.comment-reply-link {
+	border: 1px;
+	border-style: solid;
+	border-radius: 5px;
+	padding: 5px;
+	text-decoration: none;
+}

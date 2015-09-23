@@ -17,9 +17,6 @@ Distributed under the terms of the GNU General Public License v2.0
 
 */
 
-body { 
-}
-
 ul li {
 	list-style: none;
 }
@@ -48,7 +45,6 @@ li:before {
 	background: transparent;
 	margin: 5px 10px 5px 5px;
 	float: left;	
-	background-image: url('http://justanothercyclist.com/files/2015/06/JAC_chainring_red_125x125.png');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: 0px;
@@ -75,6 +71,7 @@ li:before {
 }
 .jacbt_title_block {
 	display:	inline-block;
+	padding-left: 5px;
 }
 .jacbt_header_title {
 	margin:		5px 0px 0px 0px;	
@@ -94,7 +91,8 @@ li:before {
     right: 0;
     widht: 100%;
     margin-top: 25px;
-    margin-bottom: 0px; 
+    margin-bottom: 0px;
+    background-color: rgba(0,0,0,0.5); 
 }
 
 #jacbt_sidebar { 
@@ -102,7 +100,6 @@ li:before {
 	height: 100%;
 	float: right; 
 	margin-left: 20px;
-	border-radius: 20px;
 	padding: 10px;
 }
 
@@ -110,10 +107,8 @@ li:before {
 	width: auto;
 	height: auto;
 	margin-right: 315px;
-	border-radius: 20px;
 	padding: 25px 15px 15px 15px;
 }
-
 
 div.breaker-breaker { 
 	height: 0px;
@@ -123,14 +118,19 @@ div.breaker-breaker {
 
 #jacbt_footer { 
 	margin-top: 20px; 
-	border-radius: 20px;
 	padding: 10px;
 	overflow: auto;
 	vertical-align: middle;
 }
+
 .jacbt_footer_content {
 	display: block-inline;
 }
+.jacbt_menu_header, .jacbt_menu_header a,
+.jacbt_menu_above_content, .jacbt_menu_above_content a {
+	font-weight: bold;
+}
+
 
 .wp-caption {
     padding: 7px 3px 3px 3px;
@@ -152,4 +152,13 @@ div.breaker-breaker {
 }
 .aligncenter {
 	margin: 0 auto;
+}
+
+.comment-body {
+    background-color: #EFEFEF;
+}
+
+a.comment-reply-link {
+	background-color: white;
+	border-color: black;
 }

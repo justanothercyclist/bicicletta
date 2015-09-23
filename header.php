@@ -10,14 +10,15 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class( 'jacbt_body' ); ?> style="background-color: <?php echo get_theme_mod( 'jacbt_color_bodybg', '#888888' ) ?>;" >
-<div id="jacbt_site_header" class="jacbt_site_header jacbt_site_header_full" style="
-	background-color: <?php jacbt_hex_to_rgba( get_theme_mod( 'jacbt_color_headbg', '#FFFFFF' ), get_theme_mod( 'jacbt_header_opac', '0.8' ) ); ?>;" >
-	<a href="<?php echo get_site_url(); ?>">
-		<div id="jacbt_site_header_logo"></div>
-	</a>
+<body <?php body_class( 'jacbt_body' ); ?> >
+	<div id="jacbt_site_header" class="jacbt_site_header jacbt_site_header_full">
+	<?php if ( get_theme_mod( 'jacbt_display_logo', True) ) :?>
+    	<a href="<?php echo get_site_url(); ?>">
+    		<div id="jacbt_site_header_logo"></div>
+    	</a>
+	<?php endif; ?>
 	<div class="jacbt_title_block">
-    	<h1 class="jacbt_header_title" style="color: <?php echo get_theme_mod( 'jacbt_color_headtxt', '#000000'); ?>"><?php 
+    	<h1 class="jacbt_header_title"><?php 
     	  if ( get_theme_mod( 'jacbt_display_blogname', True) ) {
     	    echo get_bloginfo( 'name' ); 
     	  }?></h1>

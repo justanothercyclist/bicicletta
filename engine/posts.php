@@ -40,6 +40,11 @@ function jacbt_render_posts() {
   		
   		<?php 
   		  the_content(__('Continue Reading &rarr;'));
+  		?>
+  	      <div class="jacbt_post_meta jacbt_post_tags jacbt_meta_wrapper">
+  	        <?php echo get_the_tag_list( __( 'Tagged: '), ', ', '.' ); ?>
+  	      </div>
+    	<?php 	  
   		  if ( is_single() ) {
   		    $previous_link = '';
   		    $next_link = '';

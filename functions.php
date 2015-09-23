@@ -3,6 +3,7 @@
  * Here you will find only the initalization and registration functions.
  */
 
+add_action( 'wp_head', 'jacbt_render_customizations' );
 
 foreach (glob(TEMPLATEPATH . '/engine/*.php') as $core_php) {
     include $core_php;
@@ -82,8 +83,6 @@ function jacbt_load_depends() {
   wp_enqueue_style( 'jacbt_menus', get_stylesheet_directory_uri() . '/css/menus.css' );
   wp_enqueue_style( 'jacbt_widgets', get_stylesheet_directory_uri() . '/css/widgets.css' );
   wp_enqueue_style( 'jacbt_comments', get_stylesheet_directory_uri() . '/css/comments.css' );
-  /* TODO: Eventually we want this to be driven by a config variable. For now 'peloton' is a placeholder */
-  wp_enqueue_style( 'jacbt_scheme', get_stylesheet_directory_uri() . '/color-schemes/peloton.css' );
 
   /* JS */
   if ( is_singular() ) {
