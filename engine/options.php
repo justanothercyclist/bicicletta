@@ -42,7 +42,7 @@ add_action( 'customize_register', 'jacbt_customize_register' );
 function jacbt_reg_colors( $wp_customize ) {
   
   $wp_customize->add_setting( 'jacbt_color_bodybg', array(
-    'type' => 'theme_mod', // or 'option'
+    'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'default' => '#888888',
     'sanitize_callback' => 'sanitize_hex_color',
@@ -53,7 +53,7 @@ function jacbt_reg_colors( $wp_customize ) {
   	'settings'   => 'jacbt_color_bodybg'
   ) ) );  
   $wp_customize->add_setting( 'jacbt_color_body', array(
-    'type' => 'theme_mod', // or 'option'
+    'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'default' => '#000000',
     'sanitize_callback' => 'sanitize_hex_color',
@@ -65,7 +65,7 @@ function jacbt_reg_colors( $wp_customize ) {
   ) ) ); 
     
   $wp_customize->add_setting( 'jacbt_color_contbg', array(
-    'type' => 'theme_mod', // or 'option'
+    'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'default' => '#FFFFFF',
     'sanitize_callback' => 'sanitize_hex_color',
@@ -76,8 +76,21 @@ function jacbt_reg_colors( $wp_customize ) {
   	'settings'   => 'jacbt_color_contbg'
   ) ) );  
 
+  $wp_customize->add_setting( 'jacbt_color_imgbg', array(
+    'type' => 'theme_mod',
+    'capability' => 'edit_theme_options',
+    'default' => '#EEEEEE',
+    'sanitize_callback' => 'sanitize_hex_color',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'jacbt_color_stickbg', array(
+  	'label'        => __( 'Image and thumbnail background color', 'bicicletta' ),
+    'description' => __('Background for the box around images in both posts and the gallery.', 'bicicletta'),
+  	'section'    => 'jacbt_site_colors',
+  	'settings'   => 'jacbt_color_imgbg'
+  ) ) );  
+  
   $wp_customize->add_setting( 'jacbt_color_stickbg', array(
-    'type' => 'theme_mod', // or 'option'
+    'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'default' => '#ffffBA',
     'sanitize_callback' => 'sanitize_hex_color',
@@ -89,7 +102,7 @@ function jacbt_reg_colors( $wp_customize ) {
   ) ) );  
 
   $wp_customize->add_setting( 'jacbt_color_metatxt', array(
-    'type' => 'theme_mod', // or 'option'
+    'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'default' => '#727272',
     'sanitize_callback' => 'sanitize_hex_color',
@@ -101,7 +114,7 @@ function jacbt_reg_colors( $wp_customize ) {
   ) ) );
 
   $wp_customize->add_setting( 'jacbt_color_metaemp', array(
-    'type' => 'theme_mod', // or 'option'
+    'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'default' => '#727272',
     'sanitize_callback' => 'sanitize_hex_color',
@@ -113,7 +126,7 @@ function jacbt_reg_colors( $wp_customize ) {
   ) ) );
 
   $wp_customize->add_setting( 'jacbt_color_link', array(
-    'type' => 'theme_mod', // or 'option'
+    'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'default' => '#000000',
     'sanitize_callback' => 'sanitize_hex_color',
@@ -124,7 +137,7 @@ function jacbt_reg_colors( $wp_customize ) {
   	'settings'   => 'jacbt_color_link'
   ) ) );
   $wp_customize->add_setting( 'jacbt_color_linkbg', array(
-    'type' => 'theme_mod', // or 'option'
+    'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'default' => '#DDDDDD',
     'sanitize_callback' => 'sanitize_hex_color',
@@ -141,7 +154,7 @@ function jacbt_reg_colors( $wp_customize ) {
 function jacbt_reg_header( $wp_customize ) {
 
   $wp_customize->add_setting( 'jacbt_display_logo', array(
-    'type' => 'theme_mod', // or 'option'
+    'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'default' => True,
     'sanitize_callback' => 'jacbt_sanitize_truefalse',
@@ -157,7 +170,7 @@ function jacbt_reg_header( $wp_customize ) {
   ) );
   
   $wp_customize->add_setting( 'jacbt_logo_uri', array(
-    'type' => 'theme_mod', // or 'option'
+    'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'default' => get_template_directory_uri() . '/blue_bike.jpg',
     'sanitize_callback' => 'esc_url_raw',
@@ -176,7 +189,7 @@ function jacbt_reg_header( $wp_customize ) {
    );
    
   $wp_customize->add_setting( 'jacbt_dynamic_header', array(
-    'type' => 'theme_mod', // or 'option'
+    'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'default' => True,
     'sanitize_callback' => 'jacbt_sanitize_truefalse',
@@ -184,7 +197,7 @@ function jacbt_reg_header( $wp_customize ) {
   $wp_customize->add_control( 'jacbt_dynamic_header', array(
     'type' => 'checkbox',
     'priority' => 10,
-    'section' => 'jacbt_header', // Required, core or custom.
+    'section' => 'jacbt_header',
     'label' => __( 'Dynamic header resizing', 'bicicletta' ),
     'description' => __( 'Automatically resize the header in response to scrolling, focusing attention on the content.', 'bicicletta' ),
     'input_attrs' => array(
@@ -201,7 +214,7 @@ function jacbt_reg_header( $wp_customize ) {
   $wp_customize->add_control( 'jacbt_display_blogname', array(
     'type' => 'checkbox',
     'priority' => 10,
-    'section' => 'jacbt_header', // Required, core or custom.
+    'section' => 'jacbt_header',
     'label' => __( 'Display blog title in header', 'bicicletta' ),
     'input_attrs' => array(
       'class' => 'jacbt_opt_chk',
@@ -218,7 +231,7 @@ function jacbt_reg_header( $wp_customize ) {
   $wp_customize->add_control( 'jacbt_display_tagline', array(
     'type' => 'checkbox',
     'priority' => 10,
-    'section' => 'jacbt_header', // Required, core or custom.
+    'section' => 'jacbt_header',
     'label' => __( 'Display tagline in header', 'bicicletta' ),
     'description' => __( 'Show the blogs descritpion text in the header.', 'bicicletta' ),
     'input_attrs' => array(
@@ -237,7 +250,7 @@ function jacbt_reg_header( $wp_customize ) {
   $wp_customize->add_control( 'jacbt_dynamic_tagline', array(
     'type' => 'checkbox',
     'priority' => 10,
-    'section' => 'jacbt_header', // Required, core or custom.
+    'section' => 'jacbt_header',
     'label' => __( 'Context sensitive tagline', 'bicicletta' ),
     'description' => __( 'Display the post title instead of the blog description when viewing a single post.', 'bicicletta' ),
     'input_attrs' => array(
@@ -248,7 +261,7 @@ function jacbt_reg_header( $wp_customize ) {
 
       
   $wp_customize->add_setting( 'jacbt_color_headbg', array(
-    'type' => 'theme_mod', // or 'option'
+    'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'default' => '#FFFFFF',
     'sanitize_callback' => 'sanitize_hex_color',
@@ -276,7 +289,7 @@ function jacbt_reg_header( $wp_customize ) {
   ) );
   
   $wp_customize->add_setting( 'jacbt_color_headtxt', array(
-    'type' => 'theme_mod', // or 'option'
+    'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'default' => '#000000',
     'sanitize_callback' => 'sanitize_hex_color',
@@ -293,7 +306,7 @@ function jacbt_reg_menus( $wp_customize ) {
 
   /* Menu in header */
   $wp_customize->add_setting( 'jacbt_color_hmenu', array(
-    'type' => 'theme_mod', // or 'option'
+    'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'default' => '#000000',
     'sanitize_callback' => 'sanitize_hex_color',
@@ -304,7 +317,7 @@ function jacbt_reg_menus( $wp_customize ) {
   	'settings'   => 'jacbt_color_hmenu'
   ) ) );
   $wp_customize->add_setting( 'jacbt_bgcolor_hmenu', array(
-    'type' => 'theme_mod', // or 'option'
+    'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'default' => '#FFFFFF',
     'sanitize_callback' => 'sanitize_hex_color',
@@ -335,7 +348,7 @@ function jacbt_reg_menus( $wp_customize ) {
   
   /* Menu above content */
   $wp_customize->add_setting( 'jacbt_color_cmenu', array(
-    'type' => 'theme_mod', // or 'option'
+    'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'default' => '#000000',
     'sanitize_callback' => 'sanitize_hex_color',
@@ -346,7 +359,7 @@ function jacbt_reg_menus( $wp_customize ) {
   	'settings'   => 'jacbt_color_cmenu'
   ) ) );
   $wp_customize->add_setting( 'jacbt_bgcolor_cmenu', array(
-    'type' => 'theme_mod', // or 'option'
+    'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'default' => '#DDDDDD',
     'sanitize_callback' => 'sanitize_hex_color',
@@ -379,7 +392,7 @@ function jacbt_reg_layout( $wp_customize ) {
 
   /*
   $wp_customize->add_setting( 'jacbt_fixed_width', array(
-    'type' => 'theme_mod', // or 'option'
+    'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'default' => False,
     'sanitize_callback' => 'jacbt_sanitize_truefalse',
@@ -430,7 +443,7 @@ function jacbt_reg_layout( $wp_customize ) {
   ) );
 
   $wp_customize->add_setting( 'jacbt_hide_sidebar', array(
-    'type' => 'theme_mod', // or 'option'
+    'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'default' => True,
     'sanitize_callback' => 'jacbt_sanitize_truefalse',

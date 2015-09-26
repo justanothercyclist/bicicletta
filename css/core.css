@@ -126,7 +126,7 @@ div.breaker-breaker {
 }
 
 
-.wp-caption {
+.wp-caption, .gallery-icon {
     padding: 7px 3px 3px 3px;
     background-color: #eee;
     margin: 3px;

@@ -91,7 +91,6 @@ function jacbt_load_depends() {
   wp_enqueue_style( 'jacbt_menus', get_stylesheet_directory_uri() . '/css/menus.css' );
   wp_enqueue_style( 'jacbt_widgets', get_stylesheet_directory_uri() . '/css/widgets.css' );
   wp_enqueue_style( 'jacbt_comments', get_stylesheet_directory_uri() . '/css/comments.css' );
-  
   if ( is_singular() ) {
     wp_enqueue_script( "comment-reply" );
   }
