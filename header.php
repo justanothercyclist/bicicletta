@@ -1,5 +1,5 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
 <head>
 	<?php if( ! function_exists( '_wp_render_title_tag' ) ) : ?>
 	<title><?php wp_title( '&raquo;', true, 'right' ); ?></title>

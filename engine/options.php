@@ -45,6 +45,7 @@ function jacbt_reg_colors( $wp_customize ) {
     'type' => 'theme_mod', // or 'option'
     'capability' => 'edit_theme_options',
     'default' => '#888888',
+    'sanitize_callback' => 'sanitize_hex_color',
   ) );
   $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'jacbt_color_bodybg', array(
   	'label'        => __( 'Site Background Color', 'bicicletta' ),
@@ -55,6 +56,7 @@ function jacbt_reg_colors( $wp_customize ) {
     'type' => 'theme_mod', // or 'option'
     'capability' => 'edit_theme_options',
     'default' => '#000000',
+    'sanitize_callback' => 'sanitize_hex_color',
   ) );
   $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'jacbt_color_body', array(
   	'label'        => __( 'Site Text Color', 'bicicletta' ),
@@ -66,6 +68,7 @@ function jacbt_reg_colors( $wp_customize ) {
     'type' => 'theme_mod', // or 'option'
     'capability' => 'edit_theme_options',
     'default' => '#FFFFFF',
+    'sanitize_callback' => 'sanitize_hex_color',
   ) );
   $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'jacbt_color_contbg', array(
   	'label'        => __( 'Content and Sidebar Background Color', 'bicicletta' ),
@@ -76,7 +79,8 @@ function jacbt_reg_colors( $wp_customize ) {
   $wp_customize->add_setting( 'jacbt_color_stickbg', array(
     'type' => 'theme_mod', // or 'option'
     'capability' => 'edit_theme_options',
-    'default' => '#FFFF81',
+    'default' => '#ffffBA',
+    'sanitize_callback' => 'sanitize_hex_color',
   ) );
   $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'jacbt_color_stickbg', array(
   	'label'        => __( 'Sticky post Background Color', 'bicicletta' ),
@@ -88,6 +92,7 @@ function jacbt_reg_colors( $wp_customize ) {
     'type' => 'theme_mod', // or 'option'
     'capability' => 'edit_theme_options',
     'default' => '#727272',
+    'sanitize_callback' => 'sanitize_hex_color',
   ) );
   $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'jacbt_color_metatxt', array(
   	'label'        => __( 'Metadata text color (including navigation)', 'bicicletta' ),
@@ -99,6 +104,7 @@ function jacbt_reg_colors( $wp_customize ) {
     'type' => 'theme_mod', // or 'option'
     'capability' => 'edit_theme_options',
     'default' => '#727272',
+    'sanitize_callback' => 'sanitize_hex_color',
   ) );
   $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'jacbt_color_metaemp', array(
   	'label'        => __( 'Metadata emphasis color (including navigation)', 'bicicletta' ),
@@ -110,6 +116,7 @@ function jacbt_reg_colors( $wp_customize ) {
     'type' => 'theme_mod', // or 'option'
     'capability' => 'edit_theme_options',
     'default' => '#000000',
+    'sanitize_callback' => 'sanitize_hex_color',
   ) );
   $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'jacbt_color_link', array(
   	'label'        => __( 'Link text color', 'bicicletta' ),
@@ -120,6 +127,7 @@ function jacbt_reg_colors( $wp_customize ) {
     'type' => 'theme_mod', // or 'option'
     'capability' => 'edit_theme_options',
     'default' => '#DDDDDD',
+    'sanitize_callback' => 'sanitize_hex_color',
   ) );
   $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'jacbt_color_linkbg', array(
   	'label'        => __( 'Link hover background color', 'bicicletta' ),
@@ -151,6 +159,8 @@ function jacbt_reg_header( $wp_customize ) {
   $wp_customize->add_setting( 'jacbt_logo_uri', array(
     'type' => 'theme_mod', // or 'option'
     'capability' => 'edit_theme_options',
+    'default' => get_template_directory_uri() . '/blue_bike.jpg',
+    'sanitize_callback' => 'esc_url_raw',
   ) );
   $wp_customize->add_control(
        new WP_Customize_Image_Control(
@@ -241,6 +251,7 @@ function jacbt_reg_header( $wp_customize ) {
     'type' => 'theme_mod', // or 'option'
     'capability' => 'edit_theme_options',
     'default' => '#FFFFFF',
+    'sanitize_callback' => 'sanitize_hex_color',
   ) );
   $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'jacbt_color_headbg', array(
   	'label'        => __( 'Header Background Color', 'bicicletta' ),
@@ -268,6 +279,7 @@ function jacbt_reg_header( $wp_customize ) {
     'type' => 'theme_mod', // or 'option'
     'capability' => 'edit_theme_options',
     'default' => '#000000',
+    'sanitize_callback' => 'sanitize_hex_color',
   ) );
   $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'jacbt_color_headtxt', array(
   	'label'        => __( 'Header Text Color', 'bicicletta' ),
@@ -284,6 +296,7 @@ function jacbt_reg_menus( $wp_customize ) {
     'type' => 'theme_mod', // or 'option'
     'capability' => 'edit_theme_options',
     'default' => '#000000',
+    'sanitize_callback' => 'sanitize_hex_color',
   ) );
   $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'jacbt_color_hmenu', array(
   	'label'        => __( 'Header Menu Text Color', 'bicicletta' ),
@@ -294,6 +307,7 @@ function jacbt_reg_menus( $wp_customize ) {
     'type' => 'theme_mod', // or 'option'
     'capability' => 'edit_theme_options',
     'default' => '#FFFFFF',
+    'sanitize_callback' => 'sanitize_hex_color',
   ) );
   $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'jacbt_bgcolor_hmenu', array(
   	'label'        => __( 'Header Menu Background Color', 'bicicletta' ),
@@ -324,6 +338,7 @@ function jacbt_reg_menus( $wp_customize ) {
     'type' => 'theme_mod', // or 'option'
     'capability' => 'edit_theme_options',
     'default' => '#000000',
+    'sanitize_callback' => 'sanitize_hex_color',
   ) );
   $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'jacbt_color_cmenu', array(
   	'label'        => __( 'Content Menu Text Color', 'bicicletta' ),
@@ -334,6 +349,7 @@ function jacbt_reg_menus( $wp_customize ) {
     'type' => 'theme_mod', // or 'option'
     'capability' => 'edit_theme_options',
     'default' => '#DDDDDD',
+    'sanitize_callback' => 'sanitize_hex_color',
   ) );
   $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'jacbt_bgcolor_cmenu', array(
   	'label'        => __( 'Content Menu Background Color', 'bicicletta' ),
@@ -365,7 +381,7 @@ function jacbt_reg_layout( $wp_customize ) {
   $wp_customize->add_setting( 'jacbt_sidebar_width', array(
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
-    'default' => 275, // Percentage, not actual alpha. Translated in jacbt_hex_to_rgba()
+    'default' => 275,
     'sanitize_callback' => 'jacbt_sanitize_sbwidth',
   ) );
   $wp_customize->add_control( 'jacbt_sidebar_width', array(
@@ -378,8 +394,25 @@ function jacbt_reg_layout( $wp_customize ) {
       'step' => 5,
     ),
   ) );
+
+  $wp_customize->add_setting( 'jacbt_hide_sidebar', array(
+    'type' => 'theme_mod', // or 'option'
+    'capability' => 'edit_theme_options',
+    'default' => True,
+    'sanitize_callback' => 'jacbt_sanitize_truefalse',
+  ) );
+  $wp_customize->add_control( 'jacbt_hide_sidebar', array(
+    'type' => 'checkbox',
+    'priority' => 10,
+    'section' => 'jacbt_layout',
+    'label' => __( 'Hide sidebar when necessary', 'jacbt' ),
+    'descrition' => __( 'When selected, the sidebar will be hidden when the window is resized and there is no longer enough width to display the main panel properly.', 'jacbt' ),
+    'input_attrs' => array(
+      'class' => 'jacbt_opt_chk',
+    ),
+  ) );
   
-    $wp_customize->add_setting( 'jacbt_rounded_corners', array(
+  $wp_customize->add_setting( 'jacbt_rounded_corners', array(
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'default' => 'round',

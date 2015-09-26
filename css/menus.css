@@ -1,6 +1,5 @@
-/*
-	--- Menus
-*/
+@CHARSET "UTF-8";
+
 .jacbt_menu_header, .jacbt_menu_footer {
 	float:		right;
 	display:	inline-block;

@@ -1,5 +1,7 @@
-<?php function jacbt_render_customizations() { ?>  
-
+<?php 
+function jacbt_render_customizations() {   
+  global $jacbt_gutter_width;
+?>
 <style>
 body {
 	background-color: <?php echo get_theme_mod( 'jacbt_color_bodybg', '#888888' ) ?>;
@@ -8,7 +10,7 @@ body {
 .jacbt_site_header {
 	background-color: <?php jacbt_hex_to_rgba( get_theme_mod( 'jacbt_color_headbg', '#FFFFFF' ), get_theme_mod( 'jacbt_header_opac', '80' ) ); ?>
 }
-#jacbt_site_header_logo {background-image: url(<?php echo get_theme_mod( 'jacbt_logo_uri', '' );?>);}
+#jacbt_site_header_logo {background-image: url(<?php echo get_theme_mod( 'jacbt_logo_uri', get_template_directory_uri() . '/blue_bike.jpg' );?>);}
 
 .jacbt_site_header, .jacbt_site_header a  {
     color: <?php echo get_theme_mod( 'jacbt_color_headtxt', '#000000'); ?>;
@@ -29,17 +31,13 @@ body {
 	background-color: <?php echo get_theme_mod( 'jacbt_color_contbg', '#FFFFFF'); ?>;
 }
 .sticky {
-	background-color: <?php echo get_theme_mod( 'jacbt_color_stickbg', '#FFFF81'); ?>;
+	background-color: <?php echo get_theme_mod( 'jacbt_color_stickbg', '#ffffBA'); ?>;
 }
 #jacbt_sidebar {
 	width: <?php echo get_theme_mod( 'jacbt_sidebar_width', 275); ?>px;
 }
 #jacbt_content {
-	<?php 
-	  $sb_width = get_theme_mod( 'jacbt_sidebar_width', 275);
-	  $sb_width += 30; // gutter
-	?>
-	margin-right: <?php echo $sb_width; ?>px;
+	margin-right: <?php echo get_theme_mod( 'jacbt_sidebar_width', 275) + $jacbt_gutter_width; ?>px;
 }
 #jacbt_sidebar, #jacbt_content, #jacbt_footer, .jacbt_menu_above_content, .sticky {
 	<?php if ( get_theme_mod( 'jacbt_rounded_corners', 'round' ) == 'round' ) : ?>
