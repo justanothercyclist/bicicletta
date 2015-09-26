@@ -6,7 +6,7 @@ function jacbt_customize_register( $wp_customize ) {
   $wp_customize->add_section( 'jacbt_header' , array(
     'title' => __( 'Header options', 'bicicletta' ),
     'priority' => 70, 
-    'description' => __( 'Look and function of the main site header. <i>Header menu control is in the "Menu options" section</i>' )
+    'description' => __( 'Look and function of the main site header. <i>Header menu control is in the "Menu options" section</i>', 'bicicletta' )
   ) );
   $wp_customize->add_panel( 'jacbt_colors', array(
     'title' => __( 'Color scheme', 'bicicletta' ),
@@ -23,7 +23,7 @@ function jacbt_customize_register( $wp_customize ) {
         	The <b>Header Menu</b> is positioned upper right of the main header.</br>
         	The <b>Content Menu</b> is positioned between the main header and the content. It also scrolls with the content.</br>
         	You will also have to assign your menu to these areas using the menu panel.
-        ' )
+        ', 'bicicletta' )
     ) );
   $wp_customize->add_section( 'jacbt_layout' , array(
     'title' => __( 'Layout', 'bicicletta' ),
@@ -131,7 +131,7 @@ function jacbt_reg_colors( $wp_customize ) {
   ) );
   $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'jacbt_color_linkbg', array(
   	'label'        => __( 'Link hover background color', 'bicicletta' ),
-    'descritpion'  => __( 'This is used to provide a \'highlight\' when the mouse is over a link.'),
+    'descritpion'  => __( 'This is used to provide a \'highlight\' when the mouse is over a link.', 'bicicletta'),
   	'section'    => 'jacbt_site_colors',
   	'settings'   => 'jacbt_color_linkbg'
   ) ) );
@@ -150,7 +150,7 @@ function jacbt_reg_header( $wp_customize ) {
     'type' => 'checkbox',
     'priority' => 10,
     'section' => 'jacbt_header',
-    'label' => __( 'Display logo in header' ),
+    'label' => __( 'Display logo in header', 'bicicletta' ),
     'input_attrs' => array(
       'class' => 'jacbt_opt_chk',
     ),
@@ -168,7 +168,7 @@ function jacbt_reg_header( $wp_customize ) {
            'jacbt_logo_uri',
            array(
                'label'      => __( 'Blog logo', 'bicicletta' ),
-               'description' => __( '<b>Note:</b> Pick an image that scales well if you are using the dynamic header option. The image should be 125x125. You can also scale it in the media library.' ),
+               'description' => __( '<b>Note:</b> Pick an image that scales well if you are using the dynamic header option. The image should be 125x125. You can also scale it in the media library.', 'bicicletta' ),
                'section'    => 'jacbt_header',
                'settings'	=> 'jacbt_logo_uri'
            )
@@ -185,8 +185,8 @@ function jacbt_reg_header( $wp_customize ) {
     'type' => 'checkbox',
     'priority' => 10,
     'section' => 'jacbt_header', // Required, core or custom.
-    'label' => __( 'Dynamic header resizing' ),
-    'description' => __( 'Automatically resize the header in response to scrolling, focusing attention on the content.' ),
+    'label' => __( 'Dynamic header resizing', 'bicicletta' ),
+    'description' => __( 'Automatically resize the header in response to scrolling, focusing attention on the content.', 'bicicletta' ),
     'input_attrs' => array(
       'class' => 'jacbt_opt_chk',
     ),
@@ -202,7 +202,7 @@ function jacbt_reg_header( $wp_customize ) {
     'type' => 'checkbox',
     'priority' => 10,
     'section' => 'jacbt_header', // Required, core or custom.
-    'label' => __( 'Display blog title in header' ),
+    'label' => __( 'Display blog title in header', 'bicicletta' ),
     'input_attrs' => array(
       'class' => 'jacbt_opt_chk',
       'id' => 'jacbt_opt_dis_tagline'
@@ -219,8 +219,8 @@ function jacbt_reg_header( $wp_customize ) {
     'type' => 'checkbox',
     'priority' => 10,
     'section' => 'jacbt_header', // Required, core or custom.
-    'label' => __( 'Display tagline in header' ),
-    'description' => __( 'Show the blogs descritpion text in the header.' ),
+    'label' => __( 'Display tagline in header', 'bicicletta' ),
+    'description' => __( 'Show the blogs descritpion text in the header.', 'bicicletta' ),
     'input_attrs' => array(
       'class' => 'jacbt_opt_chk',
       'id' => 'jacbt_opt_dis_tagline'
@@ -238,8 +238,8 @@ function jacbt_reg_header( $wp_customize ) {
     'type' => 'checkbox',
     'priority' => 10,
     'section' => 'jacbt_header', // Required, core or custom.
-    'label' => __( 'Context sensitive tagline' ),
-    'description' => __( 'Display the post title instead of the blog description when viewing a single post.' ),
+    'label' => __( 'Context sensitive tagline', 'bicicletta' ),
+    'description' => __( 'Display the post title instead of the blog description when viewing a single post.', 'bicicletta' ),
     'input_attrs' => array(
       'class' => 'jacbt_opt_chk',
       'id' => 'jacbt_opt_dyn_tagline'
@@ -267,7 +267,7 @@ function jacbt_reg_header( $wp_customize ) {
   $wp_customize->add_control( 'jacbt_header_opac', array(
     'type' => 'range',
     'section' => 'jacbt_header',
-    'label' => __( 'Header background opacity' ),
+    'label' => __( 'Header background opacity', 'bicicletta' ),
     'input_attrs' => array(
       'min' => 0,
       'max' => 100,
@@ -312,7 +312,7 @@ function jacbt_reg_menus( $wp_customize ) {
   $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'jacbt_bgcolor_hmenu', array(
   	'label'        => __( 'Header Menu Background Color', 'bicicletta' ),
   	'section'    => 'jacbt_menu_colors',
-    'description' => __( 'Displayed when link is hovered over' ),
+    'description' => __( 'Displayed when link is hovered over', 'bicicletta' ),
     'settings'   => 'jacbt_bgcolor_hmenu'
   ) ) );
   $wp_customize->add_setting( 'jacbt_hmenu_opac', array(
@@ -324,8 +324,8 @@ function jacbt_reg_menus( $wp_customize ) {
   $wp_customize->add_control( 'jacbt_hmenu_opac', array(
     'type' => 'range',
     'section' => 'jacbt_menu_colors',
-    'label' => __( 'Header menu background opacity' ),
-    'description' => __( 'Displayed when link is hovered over' ),
+    'label' => __( 'Header menu background opacity', 'bicicletta' ),
+    'description' => __( 'Displayed when link is hovered over', 'bicicletta' ),
     'input_attrs' => array(
       'min' => 0,
       'max' => 100,
@@ -354,7 +354,7 @@ function jacbt_reg_menus( $wp_customize ) {
   $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'jacbt_bgcolor_cmenu', array(
   	'label'        => __( 'Content Menu Background Color', 'bicicletta' ),
   	'section'    => 'jacbt_menu_colors',
-    'description' => __( 'Displayed when link is hovered over' ),
+    'description' => __( 'Menu above the main content', 'bicicletta' ),
     'settings'   => 'jacbt_bgcolor_cmenu'
   ) ) );
   $wp_customize->add_setting( 'jacbt_cmenu_opac', array(
@@ -366,8 +366,7 @@ function jacbt_reg_menus( $wp_customize ) {
   $wp_customize->add_control( 'jacbt_cmenu_opac', array(
     'type' => 'range',
     'section' => 'jacbt_menu_colors',
-    'label' => __( 'Content menu background opacity' ),
-    'description' => __( 'Displayed when link is hovered over' ),
+    'label' => __( 'Content menu background opacity', 'bicicletta' ),
     'input_attrs' => array(
       'min' => 0,
       'max' => 100,
@@ -378,6 +377,41 @@ function jacbt_reg_menus( $wp_customize ) {
 
 function jacbt_reg_layout( $wp_customize ) {
 
+  /*
+  $wp_customize->add_setting( 'jacbt_fixed_width', array(
+    'type' => 'theme_mod', // or 'option'
+    'capability' => 'edit_theme_options',
+    'default' => False,
+    'sanitize_callback' => 'jacbt_sanitize_truefalse',
+  ) );
+  $wp_customize->add_control( 'jacbt_fixed_width', array(
+    'type' => 'checkbox',
+    'priority' => 10,
+    'section' => 'jacbt_layout',
+    'label' => __( 'Fixed width', 'bicicletta' ),
+    'input_attrs' => array(
+      'class' => 'jacbt_opt_chk',
+    ),
+  ) );
+
+    $wp_customize->add_setting( 'jacbt_content_width', array(
+    'type' => 'theme_mod',
+    'capability' => 'edit_theme_options',
+    'default' => 275,
+    'sanitize_callback' => 'jacbt_sanitize_sbwidth',
+  ) );
+  $wp_customize->add_control( 'jacbt_content_width', array(
+    'type' => 'number',
+    'section' => 'jacbt_layout',
+    'label' => __( 'Content area width (in pixels).', 'bicicletta' ),
+    'description' => __( 'Used only if \'Fixed Width\' is selected', 'bicicletta' ),
+    'input_attrs' => array(
+      'min' => 100,
+      'max' => 400,
+      'step' => 5,
+    ),
+  ) );
+ */
   $wp_customize->add_setting( 'jacbt_sidebar_width', array(
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
@@ -387,7 +421,7 @@ function jacbt_reg_layout( $wp_customize ) {
   $wp_customize->add_control( 'jacbt_sidebar_width', array(
     'type' => 'number',
     'section' => 'jacbt_layout',
-    'label' => __( 'Sidebar width (in pixels)' ),
+    'label' => __( 'Sidebar width (in pixels)', 'bicicletta' ),
     'input_attrs' => array(
       'min' => 100,
       'max' => 400,
@@ -405,8 +439,8 @@ function jacbt_reg_layout( $wp_customize ) {
     'type' => 'checkbox',
     'priority' => 10,
     'section' => 'jacbt_layout',
-    'label' => __( 'Hide sidebar when necessary', 'jacbt' ),
-    'descrition' => __( 'When selected, the sidebar will be hidden when the window is resized and there is no longer enough width to display the main panel properly.', 'jacbt' ),
+    'label' => __( 'Hide sidebar when necessary', 'bicicletta' ),
+    'descrition' => __( 'When selected, the sidebar will be hidden when the window is resized and there is no longer enough width to display the main panel properly.', 'bicicletta' ),
     'input_attrs' => array(
       'class' => 'jacbt_opt_chk',
     ),
@@ -436,7 +470,7 @@ function jacbt_reg_layout( $wp_customize ) {
   $wp_customize->add_control( 'jacbt_corner_radius', array(
     'type' => 'number',
     'section' => 'jacbt_layout',
-    'label' => __( 'Rounded corner radius (in pixels)' ),
+    'label' => __( 'Rounded corner radius (in pixels)', 'bicicletta' ),
     'input_attrs' => array(
       'min' => 0,
       'max' => 50,

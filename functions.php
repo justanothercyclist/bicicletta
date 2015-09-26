@@ -8,6 +8,8 @@ $jacbt_gutter_width = 30;
 /* minimum window width needed to display sidebar, if sidehide is enabled */
 $jacbt_hideside_trigger = 800;
 
+if ( !isset( $content_width ) ) $content_width = 1000; // Kinda arbitrary number to be honest
+
 add_action( 'wp_head', 'jacbt_render_customizations' );
 add_action( 'wp_head', 'jacbt_render_hideside_val_funct' );
 
@@ -71,8 +73,8 @@ add_action( 'widgets_init', 'jacpt_reg_widgets' );
 function jacbt_reg_header_menu() {
   register_nav_menus(
     array (
-      'jacbt_menu_header' => __( 'Header Menu' ),
-      'jacbt_menu_above_content' => __( 'Above Content')
+      'jacbt_menu_header' => __( 'Header Menu', 'bicicletta' ),
+      'jacbt_menu_above_content' => __( 'Above Content', 'bicicletta')
     )
   );
 }
@@ -115,8 +117,12 @@ add_action( 'wp_enqueue_scripts', 'jacbt_load_depends' );
   --- Localiztion where possible
 */
 function jacbt_localization(){
-    load_theme_textdomain('jacbt_theme', get_template_directory() . '/languages');
+    load_theme_textdomain('bicicletta', get_template_directory() . '/languages');
 }
 add_action('after_setup_theme', 'jacbt_localization');
 
+function jacbt_theme_support() {
+  add_theme_support( 'automatic-feed-links' );  
+}
+add_action( 'after_setup_theme', 'jacbt_theme_support' );
 ?>

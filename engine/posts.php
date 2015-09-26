@@ -2,7 +2,7 @@
 
 function jacbt_render_posts() {
   $pag_post_settings = array(
-	'before'           => '<div class="jacbt_post_pag_header">' . __( 'Turn the page: ' ),
+	'before'           => '<div class="jacbt_post_pag_header">' . __( 'Turn the page: ', 'bicicletta' ),
 	'after'            => '</div>',
 	'link_before'      => '',
 	'link_after'       => '',
@@ -14,8 +14,8 @@ function jacbt_render_posts() {
   
   if (have_posts()) : ?> 
       <div class="jacbt_post_nav jacbt_post_nav_top">
-  	  	<div class="jacbt_post_nav_bottom_prev"><?php next_posts_link( '&larr; ' . __( ' Older posts' ) ) ?></div>
-  	  	<div class="jacbt_post_nav_bottom_next"><?php previous_posts_link( __( 'Newer posts ' ) .  '&rarr;' ) ?></div>
+  	  	<div class="jacbt_post_nav_bottom_prev"><?php next_posts_link( '&larr; ' . __( ' Older posts', 'bicicletta' ) ) ?></div>
+  	  	<div class="jacbt_post_nav_bottom_next"><?php previous_posts_link( __( 'Newer posts ', 'bicicletta' ) .  '&rarr;' ) ?></div>
   	</div>
   	  <?php 
   
@@ -32,17 +32,17 @@ function jacbt_render_posts() {
     		<span class="jacbt_author_credit jacbt_post_meta jacbt_post_meta_left">Posted by <a class="jacbt_author_credit jacbt_post_meta" href="<?php get_author_posts_url( get_the_author_meta( 'display_name' ) );?>"><?php echo get_the_author(); ?></a></span>
     		<span class="jacbt_author_credit jacbt_post_meta jacbt_post_meta_right">Published <?php the_time('F jS, Y') ?></span>
     		<div class="breaker-breaker"></div>
-    		<span class="jacbt_post_catlist jacbt_post_meta jacbt_post_meta_left"><?php if( has_category( ) ) : echo __('Posted in ') . get_the_category_list( ', ', '' ); endif; ?></span>
-    		<span class="jacbt_edit_post jacbt_post_meta jacbt_post_meta_right"><?php edit_post_link( __('Edit') ); ?></span>
+    		<span class="jacbt_post_catlist jacbt_post_meta jacbt_post_meta_left"><?php if( has_category( ) ) : echo __('Posted in ', 'bicicletta') . get_the_category_list( ', ', '' ); endif; ?></span>
+    		<span class="jacbt_edit_post jacbt_post_meta jacbt_post_meta_right"><?php edit_post_link( __('Edit', 'bicicletta') ); ?></span>
   		</div>
   		<p>
         <?php wp_link_pages( $pag_post_settings ); ?>
   		
   		<?php 
-  		  the_content(__('Continue Reading &rarr;'));
+  		  the_content(__('Continue Reading &rarr;', 'bicicletta'));
   		?>
   	      <div class="jacbt_post_meta jacbt_post_tags jacbt_meta_wrapper">
-  	        <?php echo get_the_tag_list( __( 'Tagged: '), ', ', '.' ); ?>
+  	        <?php echo get_the_tag_list( __( 'Tagged: ', 'bicicletta'), ', ', '.' ); ?>
   	      </div>
     	<?php 	  
   		  if ( is_single() ) {
@@ -51,13 +51,13 @@ function jacbt_render_posts() {
   
   		    $seek_post = get_previous_post();
   		    if ( is_a( $seek_post , 'WP_Post' ) ) {
-  		      $link_title = '&larr; ' . __( 'Previous: ') . jacbt_truncate_string( get_the_title( $seek_post->ID ), 40 );
+  		      $link_title = '&larr; ' . __( 'Previous: ', 'bicicletta') . jacbt_truncate_string( get_the_title( $seek_post->ID ), 40 );
   		      $link_href = get_post_permalink( $seek_post->ID );
   		      $previous_link='<a class="jacbt_nav_link jacbt_nav_link_previous" href="' . $link_href . '">' . $link_title . '</a>';
   		    }
   		    $seek_post = get_next_post();
   		    if ( is_a( $seek_post , 'WP_Post' ) ) {
-  		      $link_title = __( 'Next: ') . jacbt_truncate_string( get_the_title( $seek_post->ID ), 40 ) . ' &rarr;';
+  		      $link_title = __( 'Next: ', 'bicicletta') . jacbt_truncate_string( get_the_title( $seek_post->ID ), 40 ) . ' &rarr;';
   		      $link_href = get_post_permalink( $seek_post->ID );
   		      $next_link='<a class="jacbt_nav_link jacbt_nav_link_next" href="' . $link_href . '">' . $link_title . '</a>';
   		    }
@@ -82,11 +82,11 @@ function jacbt_render_posts() {
   	?></div></p>
   	<?php endwhile; ?> 
         	<div class="jacbt_post_nav jacbt_post_nav_bottom">
-      	  	<div class="jacbt_post_nav_bottom_prev"><?php next_posts_link( '&larr; ' . __( ' Older posts' ) ) ?></div>
-      	  	<div class="jacbt_post_nav_bottom_next"><?php previous_posts_link( __( 'Newer posts ' ) .  '&rarr;' ) ?></div>
+      	  	<div class="jacbt_post_nav_bottom_prev"><?php next_posts_link( '&larr; ' . __( ' Older posts', 'bicicletta' ) ) ?></div>
+      	  	<div class="jacbt_post_nav_bottom_next"><?php previous_posts_link( __( 'Newer posts ', 'bicicletta' ) .  '&rarr;' ) ?></div>
   	  	</div>
   	  <?php else: ?>
-  		<p><?php __('Sorry, no posts matched your criteria.'); ?></p>
+  		<p><?php __('Sorry, no posts matched your criteria.', 'bicicletta'); ?></p>
   <?php endif; 
 
 }

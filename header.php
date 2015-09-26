@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
+	
 	<?php if( ! function_exists( '_wp_render_title_tag' ) ) : ?>
 	<title><?php wp_title( '&raquo;', true, 'right' ); ?></title>
 	<?php endif; ?>
@@ -22,7 +23,7 @@
     	  if ( get_theme_mod( 'jacbt_display_blogname', True) ) {
     	    echo get_bloginfo( 'name' ); 
     	  }?></h1>
-    	<h3 class="jacbt_header_tagline" style="color: <?php echo get_theme_mod( 'jacbt_color_headtxt', '#000000'); ?>"><?php
+    	<h3 class="jacbt_header_tagline"><?php
     	  if ( get_theme_mod( 'jacbt_display_tagline', True) ) {
         	  if ( get_theme_mod( 'jacbt_dynamic_tagline', True) && is_single() ) {
         	    echo jacbt_truncate_string( single_post_title( '', FALSE ), 60 );

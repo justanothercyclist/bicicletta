@@ -5,12 +5,13 @@
 	</div><!-- #primary-sidebar -->
 <?php else: ?>
 <!--  Non-widget content -->
-<h2 ><?php __('Categories'); ?></h2>
+<h2 ><?php __('Categories', 'bicicletta'); ?></h2>
 <ul >
 <?php wp_list_catergories(); ?>
 </ul>
-<h2 ><?php __('Archives'); ?></h2>
+<h2 ><?php __('Archives', 'bicicletta'); ?></h2>
 <ul >
 <?php wp_get_archives('type=monthly'); ?>
+</ul>
 <?php endif; ?>
 </div>
