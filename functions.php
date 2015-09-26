@@ -13,7 +13,7 @@ if ( !isset( $content_width ) ) $content_width = 1000; // Kinda arbitrary number
 add_action( 'wp_head', 'jacbt_render_customizations' );
 add_action( 'wp_head', 'jacbt_render_hideside_val_funct' );
 
-foreach (glob(TEMPLATEPATH . '/engine/*.php') as $core_php) {
+foreach (glob(get_template_directory()  . '/engine/*.php') as $core_php) {
     include $core_php;
 }
 

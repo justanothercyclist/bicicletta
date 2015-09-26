@@ -106,7 +106,9 @@ div.jacbt_post_pag_header {
 div.jacbt_post_pag_header a {
 	font-weight: bold;
 }
-
+.jacbt_comment_wrapper {
+	clear: both;
+}
 .reply {
 	border-radius: 5px;
 	padding: 5px;

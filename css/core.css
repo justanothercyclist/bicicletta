@@ -126,13 +126,15 @@ div.breaker-breaker {
 }
 
 
-.wp-caption, .gallery-icon {
-    padding: 7px 3px 3px 3px;
+.wp-caption, .gallery-icon, .gallery-caption {
     background-color: #eee;
     margin: 3px;
     text-align: center;
     border-radius: 5px;
-    font-size: 80%;
+} 
+.wp-caption {
+   padding: 7px 3px 3px 3px;
+   font-size: 80%;
 }
 .wp-caption-text {
 	margin: 0px 3px 0px 3px;

@@ -20,6 +20,6 @@ span.jacbt_post_meta div.comment-meta,blockquote:before,blockquote:after,.jacbt_
 .jacbt_meta_wrapper a,.jacbt_post_nav a,.jacbt_post_nav_bottom a,.comment-meta a,.jacbt_post_pag_header a{color:<?php echo get_theme_mod( 'jacbt_color_metaemp', '#828282'); ?>;}
 a{color:<?php echo get_theme_mod( 'jacbt_color_link', '#000000'); ?>;}
 a:hover{background-color:<?php echo get_theme_mod( 'jacbt_color_linkbg', '#DDDDDD'); ?>;}
-.wp-caption,.gallery-icon{background-color:<?php echo get_theme_mod( 'jacbt_color_imgbg', '#EEEEEE'); ?>;}
+.wp-caption,.gallery-icon,.gallery-caption{background-color:<?php echo get_theme_mod( 'jacbt_color_imgbg', '#EEEEEE'); ?>;}
 </style>
 <?php } ?>
