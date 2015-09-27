@@ -1,5 +1,14 @@
 @CHARSET "UTF-8";
 
+#jacbt_content li {
+	padding-bottom: 0;
+}
+#jacbt_content ul li:before {
+	margin-left: -1em;
+	margin-right: 0.5em;
+	content:"\00BB\00a0";
+}
+
 blockquote {
     position: relative;
     margin: 5px 80px 5px 60px;

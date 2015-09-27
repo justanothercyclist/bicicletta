@@ -23,6 +23,10 @@ Distributed under the terms of the GNU General Public License v2.0
 
 == Changelog ==
 
-= 0.0.5 =
+= 0.0.6 =
+* Changed font
+* Added configurable for gutter width
+* Added configurable for fixed content width
 
+= 0.0.5 =
 * Initial pre-beta release

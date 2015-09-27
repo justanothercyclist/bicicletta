@@ -27,6 +27,13 @@ Credits
 Changelog
 =========
 
+0.0.6
+-----
+
+ * Changed font
+ * Added configurable for gutter width
+ * Added configurable for fixed content width
+
 0.0.5
 -----
 

@@ -4,7 +4,7 @@
 	<?php if( ! function_exists( '_wp_render_title_tag' ) ) : ?>
 	<title><?php wp_title( '&raquo;', true, 'right' ); ?></title>
 	<?php endif; ?>
-	
+	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>	
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 
 	<?php wp_head(); ?>

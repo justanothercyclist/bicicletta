@@ -3,8 +3,6 @@
  * Here you will find only the initalization and registration functions.
  */
 
-/* space between sidebar and content */
-$jacbt_gutter_width = 30;
 /* minimum window width needed to display sidebar, if sidehide is enabled */
 $jacbt_hideside_trigger = 800;
 
@@ -101,7 +99,7 @@ function jacbt_load_depends() {
           array( 'jquery' )
     );
   }
-  if ( get_theme_mod( 'jacbt_hide_sidebar', True ) ) {
+  if ( get_theme_mod( 'jacbt_hide_sidebar', True ) && ! get_theme_mod( 'jacbt_fixed_width', False ) ) {
     wp_enqueue_script(
   		'jacbt_bicicletta_hideside_js',
           get_stylesheet_directory_uri() . '/js/hideside.js',

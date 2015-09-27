@@ -7,7 +7,6 @@
 
 <div id="main">
 	<?php get_sidebar(); ?>
-	<div id="jacbt_content-title"></div>
 	<div id="jacbt_content">
 		<?php jacbt_render_posts(); ?>		
 	</div>

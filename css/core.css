@@ -1,11 +1,12 @@
 @CHARSET "UTF-8";
 
-
+body {
+	font-family: 'Raleway', sans-serif;
+}
+	
 ul li {
 	list-style: none;
-}
-li:before {
-	content:"\00BB\00a0";
+	padding-bottom: 0.5em;
 }
 
 .breaker-breaker {
@@ -88,7 +89,6 @@ li:before {
 	width: 275px;
 	height: 100%;
 	float: right; 
-	margin-left: 20px;
 	padding: 10px;
 }
 
@@ -120,11 +120,6 @@ div.breaker-breaker {
 .jacbt_footer_content {
 	display: block-inline;
 }
-.jacbt_menu_header, .jacbt_menu_header a,
-.jacbt_menu_above_content, .jacbt_menu_above_content a {
-	font-weight: bold;
-}
-
 
 .wp-caption, .gallery-icon, .gallery-caption {
     background-color: #eee;

@@ -407,7 +407,6 @@ function jacbt_reg_menus( $wp_customize ) {
 
 function jacbt_reg_layout( $wp_customize ) {
 
-  /*
   $wp_customize->add_setting( 'jacbt_fixed_width', array(
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
@@ -424,11 +423,11 @@ function jacbt_reg_layout( $wp_customize ) {
     ),
   ) );
 
-    $wp_customize->add_setting( 'jacbt_content_width', array(
+  $wp_customize->add_setting( 'jacbt_content_width', array(
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
-    'default' => 275,
-    'sanitize_callback' => 'jacbt_sanitize_sbwidth',
+    'default' => 800,
+    'sanitize_callback' => 'jacbt_sanitize_contwidth',
   ) );
   $wp_customize->add_control( 'jacbt_content_width', array(
     'type' => 'number',
@@ -436,12 +435,12 @@ function jacbt_reg_layout( $wp_customize ) {
     'label' => __( 'Content area width (in pixels).', 'bicicletta' ),
     'description' => __( 'Used only if \'Fixed Width\' is selected', 'bicicletta' ),
     'input_attrs' => array(
-      'min' => 100,
-      'max' => 400,
-      'step' => 5,
+      'min' => 300,
+      'max' => 4000,
+      'step' => 10,
     ),
   ) );
- */
+
   $wp_customize->add_setting( 'jacbt_sidebar_width', array(
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
@@ -459,6 +458,24 @@ function jacbt_reg_layout( $wp_customize ) {
     ),
   ) );
 
+  $wp_customize->add_setting( 'jacbt_gutter_width', array(
+    'type' => 'theme_mod',
+    'capability' => 'edit_theme_options',
+    'default' => 10,
+    'sanitize_callback' => 'jacbt_sanitize_gutwidth',
+  ) );
+  $wp_customize->add_control( 'jacbt_gutter_width', array(
+    'type' => 'number',
+    'section' => 'jacbt_layout',
+    'label' => __( 'Gutter width (in pixels)', 'bicicletta' ),
+    'description' => __( 'The space between the content and sidebar. Setting this to zero and corner style to square will make the content and sidebar appear to be one panel', 'bicicletta' ),
+    'input_attrs' => array(
+      'min' => 0,
+      'max' => 100,
+      'step' => 1,
+    ),
+  ) );
+  
   $wp_customize->add_setting( 'jacbt_hide_sidebar', array(
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
@@ -553,6 +570,18 @@ function jacbt_sanitize_opacity ( $value ) {
   return( 100 );
 }
 
+function jacbt_sanitize_contwidth ( $value ) {
+  if ( $value >= 300 && $value <= 4000 ) {
+    return $value;
+  } elseif ( $value < 300 ) {
+    return 300;
+  } elseif ( $value > 4000 ) {
+    return 4000;
+  } else {
+    return 800;
+  }
+}
+
 function jacbt_sanitize_sbwidth ( $value ) {
   if ( $value >= 100 && $value <= 400 ) {
     return $value;
@@ -562,6 +591,18 @@ function jacbt_sanitize_sbwidth ( $value ) {
     return 400;
   } else {
     return 275;
+  }
+}
+
+function jacbt_sanitize_gutwidth ( $value ) {
+  if ( $value >= 0 && $value <= 100 ) {
+    return $value;
+  } elseif ( $value < 0 ) {
+    return 0;
+  } elseif ( $value > 100 ) {
+    return 100;
+  } else {
+    return 10;
   }
 }
 ?>

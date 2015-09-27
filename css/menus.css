@@ -9,16 +9,11 @@
 .jacbt_menu_header li, .jacbt_menu_above_content li {
 	display:	inline-block;
 }
-.jacbt_menu_header a {
-    padding-left: 15px;
-    padding-right: 15px;
-}
 ul.menu li:before {
 	content:"";
 }
-.jacbt_menu_footer a, .jacbt_menu_above_content a {
-    padding-left: 5px;
-    padding-right: 5px;
+.jacbt_menu_footer a, .jacbt_menu_above_content a, .jacbt_menu_header a {
+    padding: 0px 4px;
 }
 		
 .jacbt_menu_header a, .jacbt_menu_footer a, .jacbt_menu_above_content a {
@@ -27,4 +22,11 @@ ul.menu li:before {
 }
 .jacbt_menu_header a:link, .jacbt_menu_footer a:link, .jacbt_menu_above_content a:link {
     text-decoration: none;	
+}
+.jacbt_menu_header, .jacbt_menu_header a,
+.jacbt_menu_above_content, .jacbt_menu_above_content a {
+	font-weight: bold;
+}
+.jacbt_menu_above_content li {
+	padding: 2px 0px;
 }
