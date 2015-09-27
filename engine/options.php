@@ -168,6 +168,23 @@ function jacbt_reg_header( $wp_customize ) {
       'class' => 'jacbt_opt_chk',
     ),
   ) );
+
+    $wp_customize->add_setting( 'jacbt_logo_shadow', array(
+    'type' => 'theme_mod',
+    'capability' => 'edit_theme_options',
+    'default' => True,
+    'sanitize_callback' => 'jacbt_sanitize_truefalse',
+  ) );
+  $wp_customize->add_control( 'jacbt_logo_shadow', array(
+    'type' => 'checkbox',
+    'priority' => 10,
+    'section' => 'jacbt_header',
+    'label' => __( 'Raise logo above header', 'bicicletta' ),
+    'description' => __( 'Add a drop shadow under the logo to make it appear to hover over the header.', 'bicicletta' ),
+    'input_attrs' => array(
+      'class' => 'jacbt_opt_chk',
+    ),
+  ) );
   
   $wp_customize->add_setting( 'jacbt_logo_uri', array(
     'type' => 'theme_mod',

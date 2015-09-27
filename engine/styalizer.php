@@ -5,6 +5,7 @@ function jacbt_render_customizations() {
 <style>
 body{background-color:<?php echo get_theme_mod( 'jacbt_color_bodybg', '#888888' ) ?>;color:<?php echo get_theme_mod( 'jacbt_color_body', '#000000' ) ?>;}
 .jacbt_site_header{background-color:<?php jacbt_hex_to_rgba( get_theme_mod( 'jacbt_color_headbg', '#FFFFFF' ), get_theme_mod( 'jacbt_header_opac', '80' ) ); ?>}
+<?php if ( get_theme_mod( 'jacbt_logo_shadow', True ) ): ?>#jacbt_site_header_logo{box-shadow:3px 3px 5px;}<?php endif; ?>
 #jacbt_site_header_logo{background-image:url(<?php echo get_theme_mod( 'jacbt_logo_uri', get_template_directory_uri() . '/blue_bike.jpg' );?>);}
 .jacbt_site_header,.jacbt_site_header a {color:<?php echo get_theme_mod( 'jacbt_color_headtxt', '#000000'); ?>;}
 .jacbt_menu_header a{color:<?php echo get_theme_mod( 'jacbt_color_hmenu', '#000000'); ?>;}
