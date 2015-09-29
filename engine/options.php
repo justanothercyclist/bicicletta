@@ -12,19 +12,19 @@ function jacbt_customize_register( $wp_customize ) {
     'title' => __( 'Color scheme', 'bicicletta' ),
     'priority' => 71
   ) );
-    $wp_customize->add_section( 'jacbt_site_colors', array(
-      'title' => __( 'Content colors', 'bicicletta' ),
-      'panel' => 'jacbt_colors'
-    ) );
-    $wp_customize->add_section( 'jacbt_menu_colors' , array(
-      'title' => __( 'Menu colors', 'bicicletta' ),
-      'panel' => 'jacbt_colors',
-      'description' => __( 'Built-in meny location options.<br>
-        	The <b>Header Menu</b> is positioned upper right of the main header.</br>
-        	The <b>Content Menu</b> is positioned between the main header and the content. It also scrolls with the content.</br>
-        	You will also have to assign your menu to these areas using the menu panel.
-        ', 'bicicletta' )
-    ) );
+  $wp_customize->add_section( 'jacbt_site_colors', array(
+    'title' => __( 'Content colors', 'bicicletta' ),
+    'panel' => 'jacbt_colors'
+  ) );
+  $wp_customize->add_section( 'jacbt_menu_colors' , array(
+    'title' => __( 'Menu colors', 'bicicletta' ),
+    'panel' => 'jacbt_colors',
+    'description' => __( 'Built-in meny location options.<br>
+      	The <b>Header Menu</b> is positioned upper right of the main header.</br>
+      	The <b>Content Menu</b> is positioned between the main header and the content. It also scrolls with the content.</br>
+      	You will also have to assign your menu to these areas using the menu panel.
+      ', 'bicicletta' )
+  ) );
   $wp_customize->add_section( 'jacbt_layout' , array(
     'title' => __( 'Layout', 'bicicletta' ),
     'priority' => 72, 

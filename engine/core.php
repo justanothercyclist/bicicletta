@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 
 /* Trim strings and add ellipsis */
@@ -12,9 +12,9 @@ function jacbt_truncate_string( $text, $width, $elips = '...' ) {
   $text_out = $text;
   if ( strlen( $text ) > $width ) {
     $text_out = substr( $text, 0, $trun_width ) . $elips;
-  } 
+  }
   return $text_out;
-  
+
 }
 
 /* Convert hex RGBA + alpha valie into rgba output */

@@ -6,7 +6,8 @@
 /* minimum window width needed to display sidebar, if sidehide is enabled */
 $jacbt_hideside_trigger = 800;
 
-if ( !isset( $content_width ) ) $content_width = 1000; // Kinda arbitrary number to be honest
+// Kinda arbitrary unless we are fixed width
+if ( !isset( $content_width ) ) $content_width = get_theme_mod( 'jacbt_content_width', 800 );
 
 add_action( 'wp_head', 'jacbt_render_customizations' );
 add_action( 'wp_head', 'jacbt_render_hideside_val_funct' );

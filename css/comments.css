@@ -1,24 +1,28 @@
 @CHARSET "UTF-8";
 
 li.comment:before {
-	content:'';
+	content: '';
 }
 
 .comment-body {
-    border-radius: 0px 15px 15px 15px;
-    padding: 15px;
-    margin-bottom: 10px;}
+	border-radius: 0px 15px 15px 15px;
+	padding: 15px;
+	margin-bottom: 10px;
+}
 
 p.comment-form-comment label {
 	display: block;
 }
+
 p.comment-form-comment textarea {
-    border-radius: 15px 15px 0px 15px;
+	border-radius: 15px 15px 0px 15px;
 }
+
 div.vcard img.avatar {
-    float: left;
-    margin-right: 10px;
+	float: left;
+	margin-right: 10px;
 }
+
 a.comment-reply-link {
 	border: 1px;
 	border-style: solid;
