@@ -7,7 +7,7 @@ body{background-color:<?php echo get_theme_mod( 'jacbt_color_bodybg', '#888888' 
 	$jacbt_main_width = get_theme_mod( 'jacbt_content_width', 800 ) + get_theme_mod( 'jacbt_gutter_width', 10 ) + get_theme_mod( 'jacbt_sidebar_width', 275 ) + 20;
 ?>
 #jacbt_wrapper{width:<?php echo $jacbt_main_width; ?>px;margin:0px auto;}
-#jacbt_sidebar{border:0px none;}
+#jacbt_sidebar{width:<?php echo get_theme_mod( 'jacbt_sidebar_width', 275); ?>px;border:0px none;}
 <?php } else { ?>
 #jacbt_sidebar{width:<?php echo get_theme_mod( 'jacbt_sidebar_width', 275); ?>px;border-left:1px solid <?php echo get_theme_mod( 'jacbt_color_bodybg', '#888888' ) ?>;border-bottom:1px solid <?php echo get_theme_mod( 'jacbt_color_bodybg', '#888888' ) ?>}	
 <?php } ?>
@@ -22,8 +22,9 @@ body{background-color:<?php echo get_theme_mod( 'jacbt_color_bodybg', '#888888' 
 #jacbt_sidebar,#jacbt_content,#jacbt_footer,.jacbt_menu_above_content{background-color:<?php echo get_theme_mod( 'jacbt_color_contbg', '#FFFFFF'); ?>;}
 .sticky{background-color:<?php echo get_theme_mod( 'jacbt_color_stickbg', '#ffffBA'); ?>;}
 #jacbt_sidebar,#jacbt_content,#jacbt_footer,.jacbt_menu_above_content,.sticky{<?php if ( get_theme_mod( 'jacbt_rounded_corners', 'round' ) == 'round' ) : ?>border-radius:<?php echo get_theme_mod( 'jacbt_corner_radius', 25) ?>px;<?php else: ?>border-radius:0;<?php endif; ?>}
-#jacbt_content{margin-right:<?php echo get_theme_mod( 'jacbt_sidebar_width', 275) + get_theme_mod( 'jacbt_gutter_width', 10 ) + 20; ?>px;}
+#jacbt_gutter{width:<?php echo get_theme_mod( 'jacbt_gutter_width', 10 ); ?>px;}
 span.jacbt_post_meta div.comment-meta,blockquote:before,blockquote:after,.jacbt_post_pag_header,.jacbt_meta_wrapper,.jacbt_post_nav,.jacbt_post_nav_bottom,.comment-meta{color:<?php echo get_theme_mod( 'jacbt_color_metatxt', '#727272'); ?>;}
+#jacbt_footer{margin-top:<?php echo get_theme_mod( 'jacbt_gutter_width', 10 ) ?>px;}
 .jacbt_meta_wrapper a,.jacbt_post_nav a,.jacbt_post_nav_bottom a,.comment-meta a,.jacbt_post_pag_header a{color:<?php echo get_theme_mod( 'jacbt_color_metaemp', '#828282'); ?>;}
 a{color:<?php echo get_theme_mod( 'jacbt_color_link', '#000000'); ?>;}
 a:hover{background-color:<?php echo get_theme_mod( 'jacbt_color_linkbg', '#DDDDDD'); ?>;}

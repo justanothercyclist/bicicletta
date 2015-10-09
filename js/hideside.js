@@ -5,12 +5,12 @@ jQuery(document).ready(jacbt_sidebar_visibility());
 function jacbt_sidebar_visibility() {
 	jQuery(window).resize( function(){
 		if (jQuery(window).width() > jacbt_content_min_width) {
-			jQuery("#jacbt_sidebar").css('display','block');
-			jQuery("#jacbt_content").css('margin-right',jacbt_content_margin_right);
+			jQuery("#jacbt_sidebar").css('display','table-cell');
+			jQuery("#jacbt_gutter").css('display','table-cell');
 		}
 		else { 
 			jQuery("#jacbt_sidebar").css('display','none');
-			jQuery("#jacbt_content").css('margin-right','0');
+			jQuery("#jacbt_gutter").css('display','none');
 		}
 	});
 }

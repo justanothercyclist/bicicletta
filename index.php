@@ -6,10 +6,11 @@
 ?>
 
 <div id="main">
-	<?php get_sidebar(); ?>
 	<div id="jacbt_content">
 		<?php jacbt_render_posts(); ?>		
 	</div>
+	<div id="jacbt_gutter"></div>
+  <?php get_sidebar(); ?>
 </div>
 <div class="breaker-breaker"></div>
 <?php get_footer(); ?>

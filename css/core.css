@@ -1,4 +1,4 @@
-@CHARSET "UTF-8";
+f@CHARSET "UTF-8";
 
 body {
 	font-family: 'Raleway', sans-serif;
@@ -78,6 +78,9 @@ ul li {
 	height: auto;
 }
 
+.jacbt_footer_widget_wrapper {
+	width 33%;
+}
 #site-footer {
 	min-height: 30px;
 	left: 0;
@@ -88,15 +91,21 @@ ul li {
 	background-color: rgba(0, 0, 0, 0.5);
 }
 
-#jacbt_sidebar {
-	width: 275px;
+#main {
+	display: table;
+}
+#jacbt_gutter {
+	display: table-cell;
 	height: 100%;
-	float: right;
+}
+#jacbt_sidebar {
+	height: 100%;
+	display: table-cell;
 	padding: 10px;
 }
 
 #jacbt_content {
-	width: auto;
+	display: table-cell;
 	height: auto;
 	padding: 25px 15px 15px 15px;
 	-webkit-transition: all 0.4s linear;
@@ -159,4 +168,14 @@ div.breaker-breaker {
 a.comment-reply-link {
 	background-color: white;
 	border-color: black;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
 }
